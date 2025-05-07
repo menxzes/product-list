@@ -1,0 +1,109 @@
+:root {
+  --color-bg: #f9f4ef;
+  --color-headline: #020826;
+  --color-paragraph: #716040;
+  --color-button: #8c7851;
+  --color-button-text: #ffffff;
+  --color-highlight: #8c7851;
+  --color-secondary: #eaddcf;
+  --color-tertiary: #f25042;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lora', serif;
+  background-color: var(--color-bg);
+  color: var(--color-headline);
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  gap: 2rem;
+
+  .menu {
+    flex: 3;
+
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+  }
+
+  .cart {
+    flex: 1;
+    background-color: #fffffe;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    .cart-summary {
+      margin-top: 1rem;
+      text-align: right;
+
+      #confirm-button {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        background-color: var(--color-button);
+        color: var(--color-button-text);
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+      }
+      #confirm-button:hover {
+        background-color: var(--color-highlight);
+      }
+    }
+  }
+}
+
+.product-card {
+  background-color: var(--color-secondary);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+}
+
+h2, h3 {
+  color: var(--color-headline);
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+p {
+  color: var(--color-paragraph);
+}
+
+/* ======MEDIA QUERIES====== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .menu, .cart {
+    width: 100%;
+  }
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .cart-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
