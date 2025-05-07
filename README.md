@@ -35,7 +35,7 @@ Este é um projeto web dinâmico de um **cardápio de sobremesas**, desenvolvido
 
 Para testar o projeto diretamente no navegador:
 
-👉 [Acesse a versão online do projeto no GitHub Pages](https://SEU_USUARIO.github.io/NOME_DO_REPOSITORIO)
+👉 [Acesse a versão online do projeto no GitHub Pages](https://menxzes.github.io/sobremesas-dinamico/)
 
 ---
 
